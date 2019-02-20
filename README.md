@@ -26,6 +26,7 @@ void loop() {
   MOTORDERECHO.write(0);//girar el sentido horario
     delay (1000);
   MOTORIZQUIERDO.write(180);
+  l
   
   
 } 
