@@ -1,4 +1,4 @@
-//Leidy Lopez - Luis Manuel Jiménez Tabares.
+//Leidy Tatiana Lopez - Luis Manuel Jiménez Tabares.
 #include<Servo.h> //Libreria para manejo de servos
 
 #define PINSERVODERECHO 6// Definido el pin del servo derecho
