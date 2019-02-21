@@ -15,20 +15,20 @@ void setup() {
   Izquierdo.attach(PINSERVOIZQUIERDO);
   Serial.begin(9600);
   BT.begin(9600);
-  Izquierdo.write(90);//stop al inicio
-  Derecho.write(90);//stop al inicio
+  Izquierdo.write(90); //Stop al inicio
+  Derecho.write(90); //Stop al inicio
 }
 
 char orden;
 
 
 void loop() {
-  if(Serial.available())
+  if(Serial.available()>0)
   {
     orden=Serial.read();
     Serial.println(orden);
   }
-  if(BT.available())
+  if(BT.available()>0)
   {
     orden=BT.read();
     Serial.println(orden);
