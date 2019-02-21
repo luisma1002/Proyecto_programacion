@@ -15,8 +15,7 @@ void setup() {
   Izquierdo.attach(PINSERVOIZQUIERDO);
   Serial.begin(9600);
   BT.begin(9600);
-  Izquierdo.write(90); //Stop al inicio
-  Derecho.write(90); //Stop al inicio
+ 
 }
 
 char orden;
