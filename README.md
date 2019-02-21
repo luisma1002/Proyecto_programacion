@@ -11,11 +11,10 @@ SoftwareSerial BT(RXBluetooth,TXBluetooth);
 
 
 void setup() {
-  Serial.begin(9.600);
-  MOTORDERECHO.attach(pinservoderecho);
-  MOTORIZQUIERDO.attach(pinservoizquierdo);
-  // put your setup code here, to run once:
-
+  Derecho.attach(PINSERVODERECHO);
+  Izquierdo.attach(PINSERVOIZQUIERDO);
+  Serial.begin(9600);
+  BT.begin(9600);
 }
 
 void loop() {
