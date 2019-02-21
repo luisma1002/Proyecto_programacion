@@ -1,3 +1,4 @@
+//Leidy Lopez - Luis Manuel Jiménez Tabares.
 #include <servo.h> //Libreria para manejo de servos
 #include <SoftwareSerial.h> //Libreria para Bluetooth
 #define PINSERVODERECHO 6 // Definido el pin del servo derecho
