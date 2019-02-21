@@ -11,7 +11,7 @@ Servo Izquierdo;
 //SoftwareSerial BT(RXBluetooth,TXBluetooth);
 
 
-char orden;
+int orden;
 
 void setup() {
   Derecho.attach(PINSERVODERECHO);
