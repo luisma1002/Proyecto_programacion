@@ -1,10 +1,14 @@
 //Leidy Lopez - Luis Manuel Jiménez Tabares.
 #include<Servo.h> //Libreria para manejo de servos
+
 #define PINSERVODERECHO 6// Definido el pin del servo derecho
 #define PINSERVOIZQUIERDO 11
+
 Servo Derecho;
 Servo Izquierdo;
+
 int orden = '0';
+
 void setup() {
   Derecho.attach(PINSERVODERECHO);
   Izquierdo.attach(PINSERVOIZQUIERDO);
@@ -14,12 +18,14 @@ void setup() {
 }
 
 void loop() {
-   if (Serial.available() > 0) {    // lee el bluetooth y almacena en estado
+   if (Serial.available() > 0) 
+   {    
     orden = Serial.read();
     Serial.println(orden);
   }
     
-  if(orden == 'S'){
+  if(orden == 'S')
+  {
     Derecho.write(90);    //Motor en stop
     Izquierdo.write(90);   //Motor en stop
     
@@ -27,8 +33,8 @@ void loop() {
   else{
   if (orden == 'w') //ADELANTE
   {
-    Derecho.write(0);
-    Izquierdo.write(180);
+    Derecho.write(0); //Sentido Horario
+    Izquierdo.write(180);//Sentido Antihorario
     
   }
   if (orden == 's') //ATRAS
@@ -48,7 +54,7 @@ void loop() {
   Izquierdo.write(0);
  
   }
-   if(orden== 'p')
+   if(orden== 'p') //Parar
    {
   Derecho.write(90);
   Izquierdo.write(90);
