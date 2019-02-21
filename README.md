@@ -33,7 +33,7 @@ void loop() {
     orden=BT.read();
     Serial.println(orden);
   }
-  if(orden=='w')//Adelante
+  if(orden=='w') //Adelante
   {
     Derecho.write(0); //Sentido Horario 
     Izquierdo.write(180); //Sentido Antihorario
@@ -53,7 +53,7 @@ void loop() {
     Derecho.write(0); // Sentido Horario
     Izquierdo.write(90); //Sentido Antihorario 
   }
-  if(orden=='f')//Parar
+  if(orden=='f') //Parar
   {
     Derecho.write(90); //Detenido
     Izquierdo.write(90); //Detenido
