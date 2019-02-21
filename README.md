@@ -21,12 +21,12 @@ char orden;
 
 
 void loop() {
-  if(Serial.available()>0)
+  if(Serial.available())
   {
     orden=Serial.read();
     Serial.println(orden);
   }
-  if(BT.available()>0)
+  if(BT.available())
   {
     orden=BT.read();
     Serial.println(orden);
