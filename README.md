@@ -17,19 +17,44 @@ void setup() {
   BT.begin(9600);
 }
 
+char orden;
+
+
 void loop() {
-  char orden;
-  if(Serial.available()>0);
+  if(Serial.available()>0)
   {
     orden=Serial.read();
     Serial.println(orden);
   }
-  if(orden
-  
-  MOTORDERECHO.write(0);//girar el sentido horario
-    delay (1000);
-  MOTORIZQUIERDO.write(180);
-  l
-  
-  
+  if(BT.available()>0)
+  {
+    orden=BT.read();
+    Serial.println(orden);
+  }
+  if(orden=='w')//Adelante
+  {
+    Derecho.write(0); //Sentido Horario 
+    Izquierdo.write(180); //Sentido Antihorario
+  }
+  if(orden=='s'); //Atras
+  {
+    Izquierdo.write(180); //Sentido Horario
+    Derecho.write(0); //Sentido Antihorario
+  }
+  if(orden=='a') //Izquierda
+  {
+    Izquierdo.write(0); //Sentido Horario
+    Derecho.write(90); // Sentido Antihorario  
+  }
+  if(orden=='d') //Derecha 
+  {
+    Derecho.write(0); // Sentido Horario
+    Izquierdo.write(90); //Sentido Antihorario 
+  }
+  if(orden=='f')//Parar
+  {
+    Derecho.write(90); //Detenido
+    Izquierdo.write(90); //Detenido
+  }
+    
 } 
